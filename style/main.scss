@@ -1,0 +1,549 @@
+@import 'base/mixins';
+@import 'base/reset';
+@import 'base/variables';
+@import 'base/fonts';
+body{
+    width:100%;
+}
+.all{
+    
+    margin: 0 auto;
+}
+header{
+    
+    
+    margin: 0 auto;
+    @include backgroundheader(1440px,700px);
+    background-image: url(../images/Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.headandpromo{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 291px 0 248px;
+    padding-top: 48px;
+    justify-content: space-between;
+}
+.logo{
+    display: block;
+    width: 152px;
+    &__link{
+        @include fontLogo;
+    }
+}
+.menu{
+    display: block;
+    &__item0{
+        @include fontlogin;
+    }
+    &__item1{
+        margin: 10px;
+        @include fontlogin;
+        @include bordered(2px,$fontcolor,20px);
+        padding: 4px;
+    }
+}
+.textinhead{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__first{
+        margin-top: 148px;
+        display: block;
+        width: 470px;
+        @include changefont(52px,$fontfamilyBold,$fontcolor);
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &__second{
+        margin-top: 28px;
+        display: block;
+        width: 396px;
+        @include changefont(24px,$fontfamilyLight,rgba(247, 243, 242, 1));
+        text-align: center;
+    }
+    &__third{
+        margin-top: 33px;
+        padding: 12px;
+        display: block;
+        width: 225px;
+        @include changefont(17px,$fontfamilyBold,$fontcolor);
+        background-color: $buttoncolor;
+        border: none;
+        border-radius: 20px;
+    }
+}
+.main{
+    width:1440px;
+    margin: 0 auto;
+}
+.mainsect1{
+    padding-top:95px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.headerstyle{
+    @include changefont(26px,$fontfamilyBold,$headercolor);
+    font-weight: 700;
+    text-align: center;
+}
+.difblock{
+    margin-top: 35px;
+    width: 940px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.steps{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    padding: 0 25px 21px 25px;
+    width: 300px;
+    height: 400px;
+    @include backgroundimg(url(../images/Step\ 1\ image\ \(3\).png),no-repeat,cover);
+    &__one{
+        width: 70px;
+        height: 20px;
+        margin-top: 219px;
+       
+        @include changefont(10px,$fontfamilyRegular,$fontcolor);
+       @include changebackbut(10px);
+    }
+    &__two{
+        margin-top: 18px;
+        
+        @include changefont(24px,$fontfamilyBold,$fontcolor);
+
+    }
+    &__three{
+        margin-top: 10px;
+        
+        @include changefont(14px,$fontfamilyLight,rgba(227, 227, 227, 1));
+    }
+
+}
+.steps1{
+    @extend .steps;
+    @include backgroundimg(url(../images/Step\ 1\ image\ \(4\).png),no-repeat,cover);
+}
+.steps2{
+    @extend .steps;
+    @include backgroundimg(url(../images/Step\ 1\ image\ \(1\).png),no-repeat,cover);
+}
+.mainsect2{
+    @extend .mainsect1;
+}
+.person{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.human{
+    display: flex;
+    flex-direction: column;
+    width:221px;
+    height:205px;
+    align-items: center;
+    &__photo{
+        width: 126px;
+        height: 126px;
+        &__image{
+        position: absolute;
+        border-radius: 50%;
+        
+        }
+        &__icon{
+            width: 32px;
+            height: 32px;
+            outline: 4px solid white;
+            border-radius: 50%;
+            position: relative;
+            background-color: $buttoncolor;
+            padding: 5px;
+            top: 88px;
+            left: 88px;
+        }
+    }
+    &__name{
+        margin-top: 17px;
+        @include changefont(14px,$fontfamilyBold,rgba(68, 68, 68, 1));
+        text-align: center;
+        font-weight: 700;
+    }
+    &__desc{
+        margin-top: 12px;
+        @include changefont(14px,$fontfamilyLight,rgba(102, 102, 102, 1));
+        text-align: center;
+        padding: 5px 10px 0px 10px;
+    }
+}
+.humanbut{
+    margin-top: 48px;
+    width: 180px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @include changefont(17px,$fontfamilyBold,rgba(255, 78, 80, 1));
+    border: 3px solid rgba(255, 78, 80, 1);
+    border-radius: 20px;
+    font-weight: 700;
+    background-color: white;
+    text-transform: none;
+}
+.mainsect3{
+    margin: 0 auto;
+    margin-top: 95px;
+    width: 940px;
+    height: 1031px;
+}
+
+.bl-size{
+    width: 300px;
+    height: 310px;
+}
+.big-size{
+    width: 620px;
+    height: 310px;
+}
+.discover{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.imageandtext{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__text{
+        display: flex;
+        position: absolute;
+       
+        @include changefont(22px,$fontfamilyBold,$fontcolor);
+        font-weight:700;
+        
+    }
+    &__image{
+        margin-top: 20px;
+        position:relative;
+    }
+}
+.textblsize{
+    width: 187px;
+    height:54px;
+    text-align: center;
+}
+.mainsect4{
+    @extend .mainsect1;
+    
+
+}
+.question{
+    margin-top:43px;
+    text-align:center;
+    @include changefont(18px,$fontfamilyLight,rgba(102, 102, 102, 1));
+}
+.formsearch{
+    margin-top:25px;
+    display:flex;
+    margin-bottom:123px;
+    &__search{
+        width:299px;
+        height:40px;
+    }
+    &__button{
+         margin-left: 10px;
+        display: block;
+        width: 172px;
+        @include changefont(14px,$fontfamilyBold,$fontcolor);
+        background-color: $buttoncolor;
+        border: none;
+        border-radius: 20px;
+    }
+}
+
+.foot{
+
+    width:1440px;
+    height:224px;
+    margin: 0 auto;
+}
+.line{
+    border-top: 2px solid red;
+    margin-bottom: 48px;
+}
+.footcontent{
+    
+    display: flex;
+    width:940px;
+    margin: 0 auto;
+    
+justify-content: space-between;
+
+}
+.dream{
+   @include changefont(16px,$fontfamilyRegular,rgba(255, 78, 80, 1)) ;
+   font-weight: 400;
+   text-transform: uppercase;
+}
+.company{
+    display:flex;
+    flex-direction:column;
+    width:114px;
+    &__header{
+        @include changefont(17px,$fontfamilyBold,$headercolor);
+        font-weight: 700;
+    }
+    &__block{
+        display:flex;
+    flex-direction:column;
+    &__items{
+        margin-top:11px;
+        @include changefont(14px,$fontfamilyLight,rgba(153, 153, 153, 1));
+    }
+    }
+    
+
+}
+.areto{
+    display:flex;
+    flex-direction: column;
+    
+    &__text{
+        @include changefont(10px,$fontfamilyBold,rgba(204, 204, 204, 1));
+        text-transform: uppercase;
+        font-weight:700;
+        text-align: end;
+    }
+    &__img{
+        width:110px;
+        height: 24px;
+    }
+}
+@media (max-width:768px){
+    header{
+        @include backgroundheader(768px,700px);
+    }
+.headandpromo{
+    
+    margin: 0px 50px 0 48px;
+    
+}
+.main{
+    width:768px;
+    
+}
+.difblock{
+    width:748px;
+}
+.steps{
+    width:236px;
+}
+.person{
+     margin-top: 0px;
+    width:492px;
+    flex-wrap:wrap;
+    flex-direction: space-between;
+     
+}
+.human{
+     margin-top: 54px;
+}
+.mainsect3{
+    
+    width: 748px;
+    height: 1031px;
+}
+.bl-size{
+    width: 236px;
+    
+}
+.big-size{
+    width: 492px;
+    
+}
+.foot{
+    width: 768px;
+}
+.footcontent{
+    width:748px;
+}
+}
+@media (max-width:540px){
+    header{
+       @include backgroundheader(320px,540px); 
+    }
+    .headandpromo{
+        height:200px;
+        padding-top: 20px;
+    flex-direction: column-reverse;
+    justify-content:space-between;
+    align-items:center;
+}
+.textinhead{
+    &__first{
+        margin-top: 26.5px;
+        width: 281px;
+        @include changefont(30px,$fontfamilyBold,$fontcolor);
+    }
+      &__second{
+        margin-top: 6px;
+        display: block;
+        width: 281px;
+        @include changefont(18px,$fontfamilyLight,rgba(247, 243, 242, 1));
+        text-align: center;
+    }
+    &__third{
+        margin-top: 15px;
+        width: 280px;
+        
+    }
+    
+}
+.main{
+    width:300px;
+}
+.mainsect1{
+    padding-top:35px;
+}
+.headerstyle{
+    @include changefont(22px,$fontfamilyBold,$headercolor);
+    
+}
+.difblock{
+    margin-top: 25px;
+    width: 300px;
+    height:760px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.steps{
+    height: 240px;
+    width:300px;
+}
+.person{
+     margin-top: 0px;
+    width:300px;
+    flex-wrap:wrap;
+    flex-direction: space-between;
+    justify-content:center;
+     
+}
+.human{
+     margin-top: 16px;
+    &__name{
+        
+        @include changefont(18px,$fontfamilyBold,rgba(68, 68, 68, 1));
+     text-align: center;
+        font-weight: 700;
+    } 
+}
+.humanbut{
+    margin-top: 36px;
+    width: 280px;
+}
+.mainsect3{
+    margin: 0 auto;
+    margin-top: 36px;
+    width: 300px;
+    height: 920px;
+}
+.bl-size{
+    width: 300px;
+    height: 120px;
+}
+.big-size{
+    width:300;
+    height: 120px;
+}
+.imageandtext{
+    &__image{
+        margin-top: 10px;
+        
+    }
+}
+.question{
+    margin-top:9px;
+}
+.formsearch{
+    margin-top:9px;
+    flex-direction:column;
+    justify-content:center;
+    margin-bottom:40px;
+    &__search{
+        width:280px;
+        height:40px;
+    }
+    &__button{
+        margin-top:10px;
+         margin-left: 0px;
+        width: 280px;
+         height:40px;
+    }
+}
+.foot{
+
+    width:320px;
+    height:204px;
+    margin: 0 auto;
+}
+.line{
+    
+    margin-bottom: 19px;
+}
+.footcontent{
+    
+    display: flex;
+    flex-direction:column;
+    width:280px;
+    
+align-items:center;
+
+}
+.company{
+    
+    width:280px;
+    &__header{
+        margin-top:13px;
+        width:280px;
+        text-align:center;
+        font-weight: 700;
+    }
+    &__block{
+        width:280px;
+        height:52px;
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content:center;
+        &__items{
+        margin-top:8px;
+        margin-right: 10px;
+        @include changefont(14px,$fontfamilyLight,rgba(153, 153, 153, 1));
+    }
+    }
+    
+}
+.areto{
+    margin-top:14px;
+    &__text{
+        text-align: center;
+    }
+    &__img{
+        margin-top:7px;
+        margin-bottom:15px;
+        width:110px;
+        height: 24px;
+    }
+}
+}

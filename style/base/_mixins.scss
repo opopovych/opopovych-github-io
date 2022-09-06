@@ -1,0 +1,55 @@
+@mixin backgroundheader($w,$h) {
+    
+    width: $w;
+    height: $h;
+}
+@mixin fontLogo{
+    font: {
+    size: 20px;
+    family: $fontfamilyBold;
+    }
+    text: {
+        decoration: none;
+        transform: uppercase;
+}
+        color: $fontcolor;
+}
+@mixin fontlogin{
+    font: {
+    size: 14px;
+    family: $fontfamilyRegular;
+    }
+    text: {
+        decoration: none;
+        
+}
+        color: $fontcolor;
+}
+@mixin bordered ($w,$c,$r){
+    
+    border: $w solid $c;
+    border-radius: $r;
+}
+@mixin changefont($size,$family,$color){
+     font: {
+    size: $size;
+    family: $family;
+    }
+    text: {
+        decoration: none;    
+}
+        color: $color;
+}
+@mixin backgroundimg($image,$repeat,$size){
+background: {
+    image: $image;
+    repeat: $repeat;
+    size: $size;
+}
+}
+@mixin changebackbut($radius){
+     background-color: $buttoncolor;
+        border: none;
+        border-radius: $radius;
+        text-transform: uppercase;
+}
